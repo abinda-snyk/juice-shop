@@ -16,18 +16,13 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'SnykConDemo'
     testType: 'app'
-    monitorWhen: 'never'
+    severityThreshold: 'high'
+    monitorWhen: 'always'
     failOnIssues: true
-    projectName: 'snykAzp'
+    projectName: 'TestAzpOne'
+    organization: 'afac34f1-cdf7-4338-a58f-dff48e56c4e0'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      #!/bin/bash
-      
-      echo 'Hello world'
-      echo 'My name is Aneh, I am the mukulumpa'
+
 - script: |
     npm install
     npm run build
