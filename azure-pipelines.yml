@@ -20,6 +20,15 @@ steps:
     failOnIssues: true
     projectName: 'snykAzp'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo "My Name is Aneh"
+      echo PWD
+      echo date
 - script: |
     npm install
     npm run build
