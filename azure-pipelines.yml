@@ -24,11 +24,10 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your commands here
+      #!/bin/bash
       
-      echo "My Name is Aneh"
-      echo PWD
-      echo date
+      echo 'Hello world'
+      echo 'My name is Aneh, I am the mukulumpa'
 - script: |
     npm install
     npm run build
