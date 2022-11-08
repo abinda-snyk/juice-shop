@@ -15,7 +15,7 @@ jobs:
       - name: Count number of resulting vulnerabilities
         run: |
           echo "VULNS=$(cat results.json | jq '.vulnerabilities[].severity' | wc -l)" >> $GITHUB_ENV
-      - name: Fail if total number greater than 5
-        if: env.VULNS > 5
+      - name: Fail if total number greater than 9
+        if: env.VULNS > 9
         run: |
           exit 1
